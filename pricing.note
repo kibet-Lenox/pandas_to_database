@@ -1,0 +1,41 @@
+# File: PRICING_NOTE.md
+
+# Pricing Note: Value of Automation
+
+## Manual Process (Current)
+
+The operations team currently runs the Monday report manually every week.
+
+- Time: 30-45 minutes per week to open DB tool, type SQL, export and clean in Excel
+- Cost: ~2-3 hours/month of staff time
+- Risk: Typos in county name, date range, or formula lead to incorrect revenue numbers
+- Dependency: Only 1-2 people know the queries
+- Limitation: Requires database tool installed, cannot run on any machine
+
+## Automated Solution (This Script)
+
+- Time: <10 seconds - `get_county_report(county, start_date, end_date)`
+- Output: Clean, consistent summary table: `product, total_orders, total_quantity, total_revenue_kes`
+- Safety: Parameterized queries (no SQL injection), handles no-results gracefully
+- Portability: Runs on any machine with Python + Supabase credentials
+- Scalable: Ready to plug into dashboard, WhatsApp bot, or automated email
+
+## Business Value
+
+1.  Time Saved: 2-3 hours/month freed for operations
+2.  Accuracy: Eliminates manual errors in weekly management reports
+3.  Continuity: Any team member can generate the report, not just DB admin
+4.  Speed: Monday report ready before 8 AM without manual work
+
+## Suggested Pricing
+
+Charge for the outcome, not the code.
+
+-One-time Automation: 5,000 - 15,000 KES
+  Includes script + setup + README + 1 training call
+
+-Monthly Service (if you host & auto-send): 2,500 - 5,000 KES / month
+  Includes hosting, auto Monday email, and support for new counties
+
+If staff cost is ~600 KES/hour, manual reporting costs the client 1,500 - 2,400 KES/month in wasted time alone. 
+Automation pays for itself in month 1.
